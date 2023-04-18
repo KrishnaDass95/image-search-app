@@ -9,7 +9,9 @@ const ImageView = ({ photo }) => {
     return (
         <div onClick={() => 
             setIsClicked(!isClicked)
-        }> 
+        }
+        className={`image-view ${isClicked ? 'expanded' : ''}`}
+        > 
             <img src={photo.urls.thumb} alt={photo.alt_description}></img>
             {
                 isClicked && 
