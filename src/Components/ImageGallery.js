@@ -1,4 +1,5 @@
 import React from "react";
+import ImageView from "./ImageView";
 
 let c = 0; // to uniquely identify the images
 const ImageGallery = ({ images }) => {
@@ -7,7 +8,7 @@ const ImageGallery = ({ images }) => {
             {
                 images.map((photo) => {
                     return (
-                        <img key={c++} src={photo.urls.small}></img>
+                        <ImageView photo={photo}></ImageView>
                     )
                 })
             }
@@ -18,3 +19,4 @@ const ImageGallery = ({ images }) => {
 
 export default ImageGallery;
 
+//<img key={c++} src={photo.urls.small}></img>
